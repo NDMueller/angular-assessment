@@ -1,0 +1,28 @@
+<!--Product Image-->
+<!--Product Image click collapse the image-->
+<a class="product-grid__product">
+    <img ng-click="flag = !flag" ng-hide="flag" ng-src="{{product.image}}" class="product-grid__img" sizes="(min-width: 960px) 33vw, (min-width: 769px) 50vw, 100vw"
+        alt="">
+</a>
+<a ng-click="flag = !flag" ng-show="flag" class="product-grid__product">
+        show image
+    </a>
+
+<!--Product Meta-->
+<div class="product-grid__meta">
+    <!--Title click Should redirect to the product-details section. remember to pass along the product id so you can make an api call
+    to get the specific product details-->
+    <h3 ui-sref="details({id: product.id})" class="product-grid__name"><a>{{product.title}}</a></h3>
+
+    <!--Product Description-->
+    <h4 class="product-grid__sub">{{product.desc}}</h4>
+
+    <!--Product Price-->
+    <div class="product-grid__price">{{product.price | currency}}</div>
+</div>
+
+<!--HELP I'm TRAPPED IN A DIRECTIVE. Somebody saaaaaaaaaaaave meeeeeee.-->
+<!--Hey! Have you heard about Pluto? That's messed up.  -->
+<!--My Water Bottle should be renamed to sir leaksalot, beacuse of all the leaking it does.-->
+<!--My heaaaaaadddd huuuuuuuuuurrrrrtttsssssss -->
+<!--Angggggggguuuuuuuuuuulllllllllllaaaaaaaaaaaaaarrrdirrrrrrreeeeeeeccccccccttiiiiiivveeeeeessssssssssssss-->
